@@ -1,0 +1,384 @@
+/* Base */
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: lighter;
+    color: rgb(250, 250, 250);
+}
+
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(20, 112, 100);
+}
+/* End base */
+
+/* Layout */
+body {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+header, footer {
+    height: 7%;
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 1000;
+    flex: 0 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    flex: 1 0;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+article {
+    padding-right: 10px;
+    padding-left: 10px;
+    flex: 1 0;
+}
+/* End Layout */
+
+/* Article & Form */
+header, footer, .text-input {
+    background-color: rgb(50, 61, 63);
+}
+
+h1 {
+    text-align: center;
+}
+
+.article-title {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    text-indent: 30px;
+}
+
+.article-title:after {
+    content: " ";
+    display: block;
+    border-bottom: solid 1px rgb(250, 250, 250);
+}
+
+form, .input-group, .radio-group {
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+.action-form {
+    margin-bottom: 20px;
+}
+
+fieldset, .button-group {
+    width: 92%;
+    margin: auto;
+}
+
+fieldset {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid rgb(250, 250, 250);
+    border-radius: 3px;
+}
+
+legend {
+    margin-left: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+label {
+    font-size: 14px;
+}
+
+.radio-label {
+    margin-right: 10px;
+}
+
+.block-label {
+    display: block;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex: 1 0;
+}
+
+.input-block, .textarea-block {
+    margin-bottom: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.input-block {
+    width: calc(100% / 3);
+}
+
+.textarea-block {
+    width: calc(100% / 3 * 2);
+}
+
+.input-wrapper, .textarea-wrapper {
+    width: 70%;
+    position: relative;
+}
+
+.textarea-wrapper {
+    width: 85%;
+}
+
+.comment {
+    resize: none;
+}
+
+.text-input {
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid rgb(250, 250, 250);
+    transition: 0.2s linear border-color;
+}
+
+label[required="true"]::after {
+    content: "*";
+    color: rgb(200, 0, 0);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.text-input:hover {
+    border-color: rgb(58, 163, 149);
+    cursor: text;
+}
+
+.lined-input {
+    width: 100%;
+}
+
+.form-button {
+    background-color: rgb(58, 163, 149);
+    border: 1px solid rgb(250, 250, 250);
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 2px;
+    transition: 0.2s linear background-color;
+    margin-right: 10px;
+}
+
+.form-button:hover {
+    background-color: rgb(44, 124, 114);
+    cursor: pointer;
+}
+
+.user-infos-wrapper {
+    margin-bottom: 30px;
+}
+
+.user-info-p {
+    width: 100%;
+    text-indent: 20px;
+}
+
+.user-info-icon {
+    margin-right: 5px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.error-line, .success-line {
+    position: relative;
+    padding: 5px;
+    margin-top: 20px;
+    background-color: rgb(255, 111, 125);
+    border: 1px solid rgb(255, 9, 33);
+    border-radius: 3px;
+    text-align: center;
+}
+
+.success-line {
+    background-color: rgb(85, 178, 144);
+    border: 1px solid rgb(11, 218, 81);
+}
+
+#signin-form {
+    width: 40%;
+}
+
+#signin-form .button-group {
+    width: 70%;
+}
+
+.signin-inputs {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signin-form-title {
+    text-align: center;
+}
+
+.logo, .logged-icon-row {
+    position: absolute;
+}
+
+.logo {
+    height: 100%;
+}
+
+.logged-icon-row {
+    top: 15px;
+    right: 10px;
+}
+
+.icon-row {
+    display: inline-block;
+}
+
+.icon-row, .icon-row span {
+    transition: 0.2s linear color;
+}
+
+.logged-icon {
+    font-size: 20px;
+}
+
+.icon-row:hover, .icon-row:hover span {
+    cursor: pointer;
+    color: rgb(94, 185, 172) !important;
+}
+
+.del-icon-row:hover span {
+    color: rgb(212, 0, 0) !important;
+}
+
+.signup-icon {
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.signup-icon-error {
+    color: rgb(255, 9, 33);
+}
+
+.signup-icon-success {
+    color: rgb(0, 188, 100);
+}
+
+.copyright {
+    widows: 100%;
+    height: 100%;
+    line-height: 50px;
+    text-align: right;
+    margin-right: 20px;
+}   
+
+.adm-panel-article {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.adm-panel-content {
+    width: 100%;
+    flex: 1 0;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.adm-panel-half {
+    min-height: 50%;
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 1px solid white;
+    border-radius: 3px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#adm-panel-users {
+    overflow-y: auto;
+}
+
+.logged-user-p {
+    width: 100%;
+}
+
+.logged-user-panel {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    flex: 1 0;
+}
+
+.logged-user-halfpan {
+    width: 50%;
+    padding: 5px 25px;
+}
+
+.logged-user-panel .logged-user-halfpan:first-of-type {
+    border-right: 1px solid white;
+}
+
+.table-wrapper {
+    width: 100%;
+}
+
+.user-list {
+    width: 100%;
+    font-size: 14px;
+}
+
+.user-list-col {
+    text-align: center;
+    padding: 8px 0px;
+}
+
+.user-list-hcol {
+    font-weight: bold;
+}
+
+.user-list-brow {
+    transition: 0.2s linear background-color;
+}
+
+.user-list-brow:hover {
+    cursor: pointer;
+    background-color: rgb(83, 179, 166);
+}
+
+.user-list-brow td {
+    border-bottom: 1px solid white;
+}
+
+.xml-users-wrapper {
+    margin-bottom: 25px;
+}
+
+.xml-user {
+    margin: 0;
+    border-bottom: 1px solid white;
+    padding: 15px 0px;
+}
