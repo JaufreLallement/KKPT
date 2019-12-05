@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<userlist>
+  <user>
+    <id>16</id>
+    <name>Test</name>
+    <firstname>Martin</firstname>
+    <city>Paris</city>
+    <birthdate>2009-12-09</birthdate>
+    <email>martin.test@utc.fr</email>
+    <password>9831be0aa42d243145c5c75c6239fc10354dec076ef0eba1f6113dcb7a7ac87e</password>
+    <gender>male</gender>
+    <studyprog>multech</studyprog>
+    <language>en</language>
+    <studyears>3</studyears>
+    <comment></comment>
+    <isAdmin>0</isAdmin>
+  </user>
+  <user>
+    <id>21</id>
+    <name>Lallement</name>
+    <firstname>Jaufré</firstname>
+    <city>Troyes</city>
+    <birthdate>1995-05-13</birthdate>
+    <email>jaufre.lallement@utt.fr</email>
+    <password>f639bcd146712c5b4f4515754a0193421089af7677ce076cd5da00d426051fe9</password>
+    <gender>male</gender>
+    <studyprog>network</studyprog>
+    <language>en</language>
+    <studyears>5</studyears>
+    <comment>Admin</comment>
+    <isAdmin>1</isAdmin>
+  </user>
+</userlist>
